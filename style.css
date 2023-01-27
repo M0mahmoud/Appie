@@ -2,6 +2,8 @@
   --blue: #0e1133;
   --red: #ff3e66;
   --mute-text: #888;
+  --white: #fff;
+  --transition: 0.3s;
 }
 
 * {
@@ -38,9 +40,9 @@ button {
   background-color: var(--red);
   padding: 16px 25px;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 900;
   border: none;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 .container {
@@ -80,12 +82,13 @@ button {
 }
 .heading p {
   color: var(--mute-text);
+  font-size: 18px;
 }
 
 /* Small */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 740px;
   }
 }
 /* Medium */
@@ -101,7 +104,7 @@ button {
   }
 }
 
-/* Header */
+/* -------Header */
 header {
   padding: 20px 0px;
   background-color: #eef1f6;
@@ -118,7 +121,7 @@ header nav ul li a {
   font-size: 20px;
 }
 
-/* HERO */
+/* ------- HERO */
 .hero {
   min-width: 100%;
   height: calc(100vh - 87px);
@@ -146,7 +149,7 @@ header nav ul li a {
 .content .input_form {
   position: absolute;
   width: 360px;
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   align-items: center;
   border-radius: 30px;
@@ -202,18 +205,18 @@ header nav ul li a {
   margin: 50px 0px;
 }
 .work .links button {
-  background: #fff;
+  background: var(--white);
   color: black;
   border: 2px solid #ddd;
   font-size: 14px;
-  transition: 0.3s;
+  transition: var(--transition);
 }
 
 .work .links button:hover {
   background: var(--red);
-  color: #fff;
+  color: var(--white);
   border-color: var(--red);
-  transition: 0.3s;
+  transition: var(--transition);
 }
 
 .features {
@@ -223,49 +226,49 @@ header nav ul li a {
   padding-bottom: 40px;
 }
 
-.box {
+.work .box {
   padding: 50px;
   border: 1px solid #ddd;
   border-radius: 10px;
 }
-.box .icon {
+.work .box .icon {
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #2facfc;
-  color: #fff;
+  color: var(--white);
   border-radius: 50%;
   margin-bottom: 25px;
 }
-.box .icon.red {
+.work .box .icon.red {
   background-color: var(--red);
 }
-.box .icon.blue {
+.work .box .icon.blue {
   background-color: #3679ff;
 }
-.box .icon.green {
+.work .box .icon.green {
   background-color: #3bb094;
 }
-.box .icon.orange {
+.work .box .icon.orange {
   background-color: #f67842;
 }
 
-.box h3 {
+.work .box h3 {
   margin-bottom: 12px;
 }
-.box p {
+.work .box p {
   color: var(--mute-text);
   /* max-width: 250px; */
   line-height: 22px;
   margin-bottom: 25px;
 }
-.box a {
+.work .box a {
   font-size: 14px;
   color: var(--mute-text);
 }
-.box a span i {
+.work .box a span i {
   margin-left: 5px;
 }
 /* ------Marketing */
@@ -321,10 +324,10 @@ header nav ul li a {
   margin-bottom: 10px;
 }
 
-/* ------- */
+/* ------- features*/
 .features_2 {
   background-color: var(--blue);
-  color: #fff;
+  color: var(--white);
   padding: 60px 0;
 }
 .features_2 .heading {
@@ -369,7 +372,7 @@ header nav ul li a {
 .details {
   padding: 60px 0;
   margin-bottom: 40px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 .numbers {
   display: flex;
@@ -380,7 +383,7 @@ header nav ul li a {
 }
 .numbers .numbers_box {
   padding: 35px;
-  background-color: #fff;
+  background-color: var(--white);
   text-align: center;
   box-shadow: 0 0 10px #ddd;
   border-radius: 12px;
@@ -467,7 +470,10 @@ header nav ul li a {
 
 /* --------Download */
 .download {
-  padding: 50px 0;
+  padding: 80px 0;
+}
+.download .content {
+  margin-bottom: 50px;
 }
 .download .content span {
   margin-bottom: 15px;
@@ -485,4 +491,432 @@ header nav ul li a {
 .download .content p {
   color: var(--mute-text);
   font-weight: normal;
+  font-size: 17px;
+}
+
+.download .system {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.download .system .box {
+  padding: 8px 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  font-size: 14px;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+}
+.download .system .box i {
+  font-size: 30px;
+}
+.download .system .box:first-child span {
+  font-weight: 600;
+}
+.download .system .box span span {
+  font-size: 20px;
+}
+
+.download .system .box:last-child {
+  background-color: var(--white);
+  color: var(--blue);
+}
+.download .system .box:last-child:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: var(--transition);
+}
+.download .system .box:first-child:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  transition: var(--transition);
+}
+
+/* --------pricing */
+.pricing {
+  padding-top: 80px;
+  background-color: var(--white);
+}
+.pricing .heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pricing .heading h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+/* ---------------------- */
+.toggle-check {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.toggle-switch {
+  width: 200px;
+  height: 42px;
+  position: relative;
+  transition: all.3s;
+  cursor: pointer;
+  border: 3px solid #ddd;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+}
+.toggle-switch::before,
+.toggle-switch::after {
+  font-weight: 600;
+  width: fit-content;
+  padding: 2px 15px;
+  height: 28px;
+  border-radius: 45px;
+  position: absolute;
+  top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.toggle-switch::before {
+  content: "Monthly";
+  background-color: var(--red);
+  color: var(--white);
+  left: 2px;
+}
+.toggle-switch::after {
+  content: "Yearly";
+  color: var(--mute-text);
+  right: 2px;
+}
+
+.toggle-check:checked + .toggle-switch::before {
+  content: "Yearly";
+  left: auto;
+  right: 2px;
+  background-color: var(--red);
+}
+.toggle-check:checked + .toggle-switch::after {
+  content: "Monthly";
+  right: auto;
+  left: 2px;
+}
+/* ---------------------- */
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding-bottom: 3rem;
+}
+.pricing .plans .plan {
+  position: relative;
+  padding: 35px;
+  background-color: var(--white);
+  text-align: left;
+  box-shadow: 0 0 8px #ddd;
+  border-radius: 12px;
+}
+.pricing .plans .plan .popular {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  background: dodgerblue;
+  padding: 5px 15px;
+  font-size: 17px;
+  color: var(--white);
+  border-radius: 12px 0 0 12px;
+  font-weight: 500;
+  -webkit-border-radius: 12px 0 0 12px;
+  -moz-border-radius: 12px 0 0 12px;
+  -ms-border-radius: 12px 0 0 12px;
+  -o-border-radius: 12px 0 0 12px;
+}
+.pricing .plans .plan h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.pricing .plans .plan .price {
+  padding: 20px 20px 10px 20px;
+}
+.pricing .plans .plan .price sup {
+  font-size: 25px;
+  margin-right: 4px;
+}
+.pricing .plans .plan .price sub {
+  margin-left: 5px;
+  font-size: 16px;
+  color: var(--mute-text);
+}
+.pricing .plans .plan .price span {
+  font-size: 35px;
+  font-weight: 900;
+}
+.pricing .plans .plan p {
+  padding-bottom: 30px;
+  font-size: 18px;
+  color: var(--mute-text);
+  border-bottom: 1px solid #eee;
+}
+.pricing .plans ul {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.pricing .plans .plan ul li i {
+  color: green;
+  background-color: rgb(51 201 86 / 30%);
+  font-size: 16px;
+  padding: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.pricing .plans .plan ul li {
+  margin-bottom: 15px;
+}
+.pricing .plans .plan ul li span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.pricing .plans .plan:first-child .btn button,
+.pricing .plans .plan:last-child .btn button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid #ddd;
+}
+
+/* --------Sponsors */
+
+.sponsors {
+  padding: 3rem 0;
+  background-color: var(--white);
+}
+
+.sponsors .heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sponsors .heading h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.sponsors .sponsor {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.sponsors .sponsor_2 {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .sponsors .sponsor {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sponsors .sponsor .box,
+.sponsors .sponsor_2 .box {
+  box-shadow: 0 0 12px #ddd;
+  width: 100px;
+  padding: 25px;
+  border-radius: 12px;
+}
+/* ----------Footer*/
+.footer .container {
+  padding: 40px 0;
+}
+.footer .info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .footer .info {
+    justify-items: flex-start;
+  }
+  .footer .download_app {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+}
+@media (max-width: 510px) {
+  .footer .info {
+    justify-items: center;
+  }
+  .footer .info .box{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer .info .box.main_info .name {
+    justify-content: center !important;
+  }
+  .footer .info .box.main_info > a {
+    justify-content: center ;
+  }
+  .footer .info .box.main_info .apps {
+    justify-content: center !important;
+  }
+}
+.footer .info .box {
+  padding: 10px;
+  color: var(--mute-text);
+}
+
+.footer .info .links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.footer .info .box.main_info {
+  max-width: 300px;
+}
+.footer .info .box.main_info .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 26px;
+  gap: 12px;
+}
+.footer .info .box.main_info .name h4 {
+  font-size: 30px;
+  color: var(--blue);
+  font-weight: 900;
+}
+.footer .info .box.main_info .name img {
+  width: 35px;
+  height: 35px;
+}
+.footer .info .box.main_info p {
+  margin-bottom: 18px;
+}
+.footer .info .box.main_info > a {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--blue);
+  margin-bottom: 30px;
+}
+.footer .info .box.main_info a span {
+  display: flex;
+  color: var(--mute-text);
+}
+.footer .info .box.main_info .apps {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.footer .info .box.main_info .apps span {
+  background-color: var(--white);
+  color: var(--blue);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ddd;
+  font-size: 18px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.footer .info .box.main_info .apps span:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.footer .box h3 {
+  color: var(--blue);
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.footer .box ul li {
+  margin-bottom: 10px;
+  transition: var(--transition);
+}
+.footer .box ul li:hover {
+  transform: translateX(10px);
+  transition: var(--transition);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+.footer .box ul li a {
+  color: var(--mute-text);
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer .box.support ul li {
+  margin-bottom: 15px;
+}
+.footer .box.support ul li {
+  font-weight: 400;
+}
+.footer .box.support ul li span {
+  margin-right: 8px;
+  color: var(--red);
+}
+
+.footer .download_app {
+  margin-top: 40px;
+}
+.footer .download_app p {
+  color: var(--mute-text);
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer .download_app .box {
+  padding: 8px;
+  color: var(--blue);
+  border-radius: 12px;
+  font-size: 14px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+.footer .download_app .box.ios {
+  background-color: var(--white);
+}
+.footer .download_app .box i {
+  font-size: 20px;
+}
+.footer .download_app .box span {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.footer .download_app .box:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  transition: var(--transition);
 }
